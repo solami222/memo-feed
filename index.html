@@ -3,226 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ティアメモ — 自分だけのタイムラインを作れる個人メモアプリ。テキスト・画像投稿、ハッシュタグ整理、自動いいねなど、X（Twitter）風UIで楽しめます。iOS 18以上対応。">
-  <title>ティアメモ — 自分だけのSNSアプリ</title>
+  <meta name="description" content="ティアメモ">
+  <title>ティアメモ — 自分だけのSNS風メモアプリ</title>
 
   <!-- OGP -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="ティアメモ — 自分だけのSNSアプリ">
-  <meta property="og:description" content="誰かに見せるためじゃない。自分のためのタイムラインを作れる個人メモアプリ。iOS 18以上対応。">
-  <meta property="og:image" content="images/01.png">
+  <meta property="og:title" content="ティアメモ — 自分だけのSNS風メモアプリ">
+  <meta property="og:description" content="誰かに見せるためじゃない。自分のためのタイムラインを作れる個人SNS風メモアプリ。iOS 18以上対応。">
+  <meta property="og:image" content="images/image1.png">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="SNS風メモ日記_Icon.jpg">
-  <link rel="apple-touch-icon" href="SNS風メモ日記_Icon.jpg">
+  <link rel="icon" href="images/SNS風メモ日記_Icon.jpg">
+  <link rel="apple-touch-icon" href="images/SNS風メモ日記_Icon.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="stylesheet.css">
+  <meta name="theme-color" content="#f6f9ff">
 </head>
 <body>
-
-<!-- ── Header ── -->
+<a class="skip-link" href="#main">本文へスキップ</a>
 <header id="site-header">
-  <nav>
-    <a href="#" class="nav-logo">
-      <img src="SNS風メモ日記_Icon.jpg" alt="ティアメモ" class="logo-icon">
-      ティアメモ
-    </a>
-    <ul class="nav-links">
-      <li><a href="#features">機能</a></li>
-      <li><a href="#screenshots">スクリーンショット</a></li>
-      <li><a href="#premium">プレミアム</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#support">サポート</a></li>
-    </ul>
-    <a href="https://apps.apple.com/jp/app/SNS風メモ日記-sns%E9%A2%A8%E3%83%A1%E3%83%A2-%E6%8E%A8%E3%81%97%E6%B4%BB-%E3%81%A4%E3%81%B6%E3%82%84%E3%81%8D-%E3%83%A1%E3%83%A2%E5%B8%B3/id6759195422" class="nav-cta">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-      入手
-    </a>
+  <nav class="container nav" aria-label="メインナビゲーション">
+    <a href="#hero" class="brand" aria-label="ティアメモ トップ"><img src="images/SNS風メモ日記_Icon.jpg" width="40" height="40" alt=""><span>ティアメモ</span></a>
+    <div class="nav-links" id="nav-links">
+      <a href="#features">機能</a><a href="#screenshots">アプリの画面</a><a href="#premium">プレミアム</a><a href="#faq">よくある質問</a><a href="#support">サポート</a>
+    </div>
+    <div class="nav-actions"><a href="https://apps.apple.com/jp/app/SNS風メモ日記-sns%E9%A2%A8%E3%83%A1%E3%83%A2-%E6%8E%A8%E3%81%97%E6%B4%BB-%E3%81%A4%E3%81%B6%E3%82%84%E3%81%8D-%E3%83%A1%E3%83%A2%E5%B8%B3/id6759195422" class="nav-cta"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg><span>入手する</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="メニューを開く"><span></span><span></span></button></div>
   </nav>
 </header>
-
-<!-- ── Hero ── -->
-<section id="hero">
-  <div class="hero-deco" aria-hidden="true">
-    <span class="deco-blob blob-1"></span>
-    <span class="deco-blob blob-2"></span>
-    <span class="deco-star star-1">✦</span>
-    <span class="deco-star star-2">✦</span>
-    <span class="deco-star star-3">✧</span>
-  </div>
+<main id="main">
+<section id="hero" class="hero" aria-labelledby="hero-title">
   <div class="container hero-inner">
     <div class="hero-copy">
-      <div class="hero-badge">✦ iOS 18+ 対応</div>
-      <h1>自分だけのSNSで、<br><span>思いのままに投稿しよう。</span></h1>
-      <p class="hero-sub">ティアメモは、誰かに見せるためじゃない。自分のためのタイムラインを作れる個人メモアプリです。</p>
-      <div class="hero-buttons">
-        <a href="https://apps.apple.com/jp/app/SNS風メモ日記-sns%E9%A2%A8%E3%83%A1%E3%83%A2-%E6%8E%A8%E3%81%97%E6%B4%BB-%E3%81%A4%E3%81%B6%E3%82%84%E3%81%8D-%E3%83%A1%E3%83%A2%E5%B8%B3/id6759195422" class="btn btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          App Store でダウンロード
-        </a>
-        <a href="#features" class="btn btn-secondary">機能を見る →</a>
-      </div>
+      <p class="eyebrow"><span class="eyebrow-line"></span> わたし専用の、SNS風メモアプリ。</p>
+      <h1 id="hero-title">自分だけのSNSで、<br><span>思いのままに</span><br>投稿しよう。</h1>
+      <p class="hero-sub">ティアメモは、誰かに見せるためじゃない。<br class="desktop-break">自分のためのタイムラインを作れる<br class="desktop-break">プライベートなSNS風メモアプリです。</p>
+      <div class="hero-buttons"><a href="https://apps.apple.com/jp/app/SNS風メモ日記-sns%E9%A2%A8%E3%83%A1%E3%83%A2-%E6%8E%A8%E3%81%97%E6%B4%BB-%E3%81%A4%E3%81%B6%E3%82%84%E3%81%8D-%E3%83%A1%E3%83%A2%E5%B8%B3/id6759195422" class="btn btn-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg><span>App Store でダウンロード</span></a><a href="#features" class="text-link">機能を見る <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+      <p class="hero-meta">iOS 18.0 以降対応<span aria-hidden="true"> / </span>アプリ内課金あり</p>
     </div>
-    <div class="hero-visual">
-      <!-- スクショ差し替え: images/01.png〜06.png を同じファイル名で上書きするだけで反映されます -->
-      <img src="images/01.png" alt="ティアメモ スクリーンショット — 誰にも見せずSNS風に書ける" class="hero-shot" width="840" height="1818">
+    <div class="hero-visual" aria-label="ティアメモのアプリ画面">
+      <div class="hero-shot hero-shot-secondary"><picture><img src="images/image2.png" alt="投稿するといいねが届く" width="1242" height="2688" loading="lazy" decoding="async"></picture></div>
+      <div class="hero-shot hero-shot-primary"><picture><img src="images/image1.png" alt="誰にも見せずSNS風に書ける" width="1242" height="2688" fetchpriority="high" decoding="async"></picture></div>
+      <div class="visual-label"><span class="visual-label-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></span><span>誰かに見せるためじゃない。<br><strong>自分のためのタイムライン。</strong></span></div>
     </div>
   </div>
+  <div class="container hero-bottom"><a href="#features">ティアメモでできること <span aria-hidden="true">↓</span></a></div>
 </section>
-
-<!-- ── Screenshots ── -->
-<section id="screenshots">
+<section id="features" class="section" aria-labelledby="features-title">
   <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label">Screenshots</div>
-      <h2>アプリの画面をチェック</h2>
-    </div>
-  </div>
-  <div class="gallery-wrap reveal">
-    <button class="gallery-btn prev" type="button" aria-label="前のスクリーンショット">‹</button>
-    <div class="gallery" id="gallery">
-      <!-- スクショ差し替え: images/01.png〜06.png を同じファイル名で上書きするだけで反映されます -->
-      <img src="images/01.png" alt="スクリーンショット 1 — 誰にも見せずSNS風に書ける" loading="lazy" width="840" height="1818">
-      <img src="images/02.png" alt="スクリーンショット 2 — 投稿するといいねが届く" loading="lazy" width="840" height="1818">
-      <img src="images/03.png" alt="スクリーンショット 3 — カレンダーで毎日を見返そう" loading="lazy" width="840" height="1818">
-      <img src="images/04.png" alt="スクリーンショット 4 — ハッシュタグで投稿を整理" loading="lazy" width="840" height="1818">
-      <img src="images/05.png" alt="スクリーンショット 5 — プロフィールも自由に設定" loading="lazy" width="840" height="1818">
-      <img src="images/06.png" alt="スクリーンショット 6 — あなたの好きなテーマカラーに" loading="lazy" width="840" height="1818">
-    </div>
-    <button class="gallery-btn next" type="button" aria-label="次のスクリーンショット">›</button>
-  </div>
-</section>
-
-<!-- ── Features ── -->
-<section id="features">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label">Features</div>
-      <h2>ティアメモでできること</h2>
-      <p>わたし専用のSNS風のメモ日記をつくろう。</p>
-    </div>
+    <div class="section-header"><div><p class="eyebrow">01 / FEATURES</p><h2 id="features-title">日々のひとことを、<br>自分だけの記録に。</h2></div><p>わたし専用のSNS風のメモ日記をつくろう。<br>書く、残す、振り返る。気軽に、あなたらしく。</p></div>
     <div class="features-grid">
-      <div class="feature-card reveal">
-        <div class="feature-icon">✏️</div>
-        <h3>テキスト・画像投稿</h3>
-        <p>テキストや画像を投稿して、自分だけのタイムラインを作れます。複数枚の画像もまとめて添付可能。</p>
-      </div>
-      <div class="feature-card reveal">
-        <div class="feature-icon">#️⃣</div>
-        <h3>ハッシュタグ整理</h3>
-        <p>投稿に <code>#タグ</code> を付けるだけで自動認識。検索タブから絞り込み表示できます。</p>
-      </div>
-      <div class="feature-card reveal">
-        <div class="feature-icon">💬</div>
-        <h3>追記（ネスト対応）</h3>
-        <p>投稿に追記を重ね、アイデアをどんどん深掘りできます。追記への追記も無限に可能。</p>
-      </div>
-      <div class="feature-card reveal">
-        <div class="feature-icon">♡</div>
-        <h3>自動いいね</h3>
-        <p>投稿後、一定時間内に自動でいいねが付与されます。設定画面からON/OFFの切り替えができます。</p>
-      </div>
-      <div class="feature-card reveal">
-        <div class="feature-icon">🔔</div>
-        <h3>いいね通知</h3>
-        <p>自動いいねが付くと通知タブに通知が届きます。未読は薄ピンク背景でひと目でわかります。</p>
-      </div>
-      <div class="feature-card reveal">
-        <div class="feature-icon">🔍</div>
-        <h3>検索・絞り込み</h3>
-        <p>キーワード・ハッシュタグ・いいね済み投稿で絞り込み検索できます。過去の投稿にすぐアクセス。</p>
-      </div>
-      <div class="feature-card reveal">
-        <div class="feature-icon">🖼️</div>
-        <h3>画像フルスクリーン表示</h3>
-        <p>画像タップでフルスクリーン表示。ピンチズーム（最大4x）・横スワイプのページングに対応。</p>
-      </div>
-      <div class="feature-card reveal">
-        <div class="feature-icon">👤</div>
-        <h3>プロフィール設定</h3>
-        <p>アイコン・名前・自己紹介を設定できます。アイコンはクロップUIで正方形にトリミング可能。</p>
-      </div>
-      <div class="feature-card reveal">
-        <div class="feature-icon">🗑️</div>
-        <h3>投稿データ管理</h3>
-        <p>投稿の全削除・期間指定削除に対応。大切なデータを整理してアプリをすっきり保てます。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Premium ── -->
-<section id="premium">
+<article class="feature-card"><div class="feature-top"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 3 5 5L9 20l-6 1 1-6L16 3Zm-3 3 5 5"/></svg></span><span class="feature-number">01</span></div><h3>テキスト・画像投稿</h3><p>テキストや画像を投稿して、自分だけのタイムラインを作れます。複数枚の画像もまとめて添付可能。</p></article>
+<article class="feature-card"><div class="feature-top"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 3-3 18M18 3l-3 18M4 9h17M3 15h17"/></svg></span><span class="feature-number">02</span></div><h3>ハッシュタグ整理</h3><p>投稿に <code>#タグ</code> を付けるだけで自動認識。検索タブから絞り込み表示できます。</p></article>
+<article class="feature-card"><div class="feature-top"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l-2 2V11.5a9.5 9.5 0 0 1 19 0Z"/><path d="M7 9h9M7 13h6"/></svg></span><span class="feature-number">03</span></div><h3>追記（ネスト対応）</h3><p>投稿に追記を重ね、アイデアをどんどん深掘りできます。追記への追記も無限に可能。</p></article>
+<article class="feature-card"><div class="feature-top"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></span><span class="feature-number">04</span></div><h3>自動いいね</h3><p>投稿後、一定時間内に自動でいいねが付与されます。設定画面からON/OFFの切り替えができます。</p></article>
+<article class="feature-card"><div class="feature-top"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg></span><span class="feature-number">05</span></div><h3>いいね通知</h3><p>自動いいねが付くと通知タブに通知が届きます。未読は薄ピンク背景でひと目でわかります。</p></article>
+<article class="feature-card"><div class="feature-top"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7.5"/><path d="m16 16 5 5"/></svg></span><span class="feature-number">06</span></div><h3>検索・絞り込み</h3><p>キーワード・ハッシュタグ・いいね済み投稿で絞り込み検索できます。過去の投稿にすぐアクセス。</p></article>
+<article class="feature-card"><div class="feature-top"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1"/><path d="m3 16 5-5 4 4 4-6 5 7"/></svg></span><span class="feature-number">07</span></div><h3>画像フルスクリーン表示</h3><p>画像タップでフルスクリーン表示。ピンチズーム（最大4x）・横スワイプのページングに対応。</p></article>
+<article class="feature-card"><div class="feature-top"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg></span><span class="feature-number">08</span></div><h3>プロフィール設定</h3><p>アイコン・名前・自己紹介を設定できます。アイコンはクロップUIで正方形にトリミング可能。</p></article>
+<article class="feature-card"><div class="feature-top"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V4h7l2 3h9v14H3V7Z"/><path d="M8 12h8M8 16h5"/></svg></span><span class="feature-number">09</span></div><h3>投稿データ管理</h3><p>投稿の全削除・期間指定削除に対応。大切なデータを整理してアプリをすっきり保てます。</p></article>
+</div></div></section>
+<section id="screenshots" class="section screenshots-section" aria-labelledby="screenshots-title">
   <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label">Premium</div>
-      <h2>プレミアムプラン</h2>
-      <p>広告なし・文字数制限カスタム・iCloudバックアップなど、さらに自由な使い方を。</p>
-    </div>
-
-    <div class="plans-grid">
-      <!-- Monthly -->
-      <div class="plan-card reveal">
-        <div class="plan-name">月額プラン</div>
-        <div class="plan-price">¥500<span>/月</span></div>
-        <div class="plan-note">&nbsp;</div>
-        <ul class="plan-features">
-          <li>広告の非表示</li>
-          <li>文字数制限カスタム設定（最大全角2,000字）</li>
-          <li>ハッシュタグ無制限</li>
-          <li>iCloud バックアップ</li>
-          <li>通知アイコンのカスタム設定（最大5枚）</li>
-        </ul>
-      </div>
-
-      <!-- Yearly (featured) -->
-      <div class="plan-card featured reveal">
-        <div class="plan-badge">おすすめ</div>
-        <div class="plan-name">年割プラン</div>
-        <div class="plan-price">¥3,600<span>/年</span></div>
-        <div class="plan-note">¥300/月相当</div>
-        <ul class="plan-features">
-          <li>広告の非表示</li>
-          <li>文字数制限カスタム設定（最大全角2,000字）</li>
-          <li>ハッシュタグ無制限</li>
-          <li>iCloud バックアップ</li>
-          <li>通知アイコンのカスタム設定（最大5枚）</li>
-        </ul>
-      </div>
-
-      <!-- Lifetime -->
-      <div class="plan-card reveal">
-        <div class="plan-name">買い切りプラン</div>
-        <div class="plan-price">¥7,000</div>
-        <div class="plan-note">一度の購入で永続利用</div>
-        <ul class="plan-features">
-          <li>広告の非表示</li>
-          <li>文字数制限カスタム設定（最大全角2,000字）</li>
-          <li>ハッシュタグ無制限</li>
-          <li>iCloud バックアップ</li>
-          <li>通知アイコンのカスタム設定（最大5枚）</li>
-        </ul>
-      </div>
-    </div>
-
-    <p class="plans-note">
-      ※ 価格はすべて税込です。購入・解約はApp Storeの設定から行えます。
-    </p>
+    <div class="section-header"><div><p class="eyebrow">02 / SCREENSHOTS</p><h2 id="screenshots-title">いつものSNSの感覚で。<br>ここでは、ぜんぶ自分のために。</h2></div></div>
+    <div class="gallery" id="gallery" tabindex="0" role="region" aria-label="アプリのスクリーンショット。左右にスクロールできます">
+<figure class="gallery-item"><picture><img src="images/image1.png" alt="誰にも見せずSNS風に書ける" width="1242" height="2688" loading="lazy" decoding="async"></picture><figcaption><span>01</span>誰にも見せずSNS風に書ける</figcaption></figure>
+<figure class="gallery-item"><picture><img src="images/image2.png" alt="投稿するといいねが届く" width="1242" height="2688" loading="lazy" decoding="async"></picture><figcaption><span>02</span>投稿するといいねが届く</figcaption></figure>
+<figure class="gallery-item"><picture><img src="images/image3.png" alt="カレンダーで毎日を振り返れる" width="1242" height="2688" loading="lazy" decoding="async"></picture><figcaption><span>03</span>カレンダーで毎日を振り返れる</figcaption></figure>
+<figure class="gallery-item"><picture><img src="images/image4.png" alt="ハッシュタグで投稿を整理" width="1242" height="2688" loading="lazy" decoding="async"></picture><figcaption><span>04</span>ハッシュタグで投稿を整理</figcaption></figure>
+<figure class="gallery-item"><picture><img src="images/image5.png" alt="複数アカウントで分けて残せる" width="1242" height="2688" loading="lazy" decoding="async"></picture><figcaption><span>05</span>複数アカウントで分けて残せる</figcaption></figure>
+<figure class="gallery-item"><picture><img src="images/image6.png" alt="プロフィールも自分好みに設定" width="1242" height="2688" loading="lazy" decoding="async"></picture><figcaption><span>06</span>プロフィールも自分好みに設定</figcaption></figure>
+<figure class="gallery-item"><picture><img src="images/image7.png" alt="自分だけのSNSを好きなカラーに" width="1242" height="2688" loading="lazy" decoding="async"></picture><figcaption><span>07</span>自分だけのSNSを好きなカラーに</figcaption></figure>
+</div></div></section>
+<section id="premium" class="section" aria-labelledby="premium-title">
+ <div class="container premium-layout">
+  <div class="premium-intro"><p class="eyebrow">03 / PREMIUM</p><h2 id="premium-title">もっと自由に、<br>もっと自分らしく。</h2><p>広告なし・複数アカウント・限定フォント・iCloudバックアップなど、さらに自由な使い方を。</p><a href="#premium-benefits" class="text-link">プレミアムの特典 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+  <div class="premium-content"><div class="plans-grid">
+    <article class="plan-card"><p class="plan-name">月額プラン</p><p class="plan-price">¥500<span> / 月</span></p><p class="plan-note">いつでも解約できます</p><div class="plan-caption">毎月のお支払い</div></article>
+    <article class="plan-card featured"><span class="plan-badge">おすすめ</span><p class="plan-name">買い切りプラン</p><p class="plan-price">¥4,000<span> / 1回</span></p><p class="plan-note">一度の購入で永続利用</p><div class="plan-caption">自動更新なし</div></article>
   </div>
+  <div class="premium-benefits" id="premium-benefits"><h3>どちらのプランでも、すべての特典を。</h3><ul class="plan-features">
+          <li>広告の非表示</li>
+          <li>複数アカウント（最大5つ）</li>
+          <li>プレミアム限定フォント8書体</li>
+          <li>テーマカラーのカスタムカラー</li>
+          <li>文字数制限カスタム設定（最大全角2,000字）</li>
+          <li>ハッシュタグ無制限</li>
+          <li>iCloud バックアップ</li>
+          <li>投稿データのエクスポート</li>
+          <li>通知アイコンのカスタム設定（最大5枚）</li>
+        </ul></div>
+  <p class="plans-note">※ 価格はすべて税込です。購入・解約はApp Storeの設定から行えます。買い切りプランは1回限りのお支払いで、自動更新はありません。</p>
+  </div>
+ </div>
 </section>
-
-<!-- ── FAQ ── -->
-<section id="faq">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label">FAQ</div>
-      <h2>よくある質問</h2>
-    </div>
-    <div class="faq-list reveal">
+<section id="faq" class="section faq-section" aria-labelledby="faq-title"><div class="container faq-layout"><div class="faq-intro"><p class="eyebrow">04 / FAQ</p><h2 id="faq-title">よくある質問</h2><a href="#support" class="text-link">解決しない場合はこちら <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div><div class="faq-list">
       <details>
         <summary>データが消えてしまいました。復元できますか？</summary>
         <p>ティアメモは投稿データをデバイス内にローカル保存しています。アプリのアンインストールや「すべての投稿を削除」を行った場合、データは復元できません。機種変更時のデータ引き継ぎには、プレミアムプランのiCloudバックアップ機能をご利用ください。</p>
@@ -261,109 +139,58 @@
       <details>
         <summary>削除した投稿は元に戻せますか？</summary>
         <p>削除した投稿は復元できません。削除の際は確認ダイアログが表示されますので、ご注意の上操作してください。削除時に関連する追記・通知も同時に削除されます。</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ── Support ── -->
-<section id="support">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label">Support</div>
-      <h2>サポート・お問い合わせ</h2>
-      <p>ご不明点・ご要望はお気軽にご連絡ください。</p>
-    </div>
-    <div class="support-grid">
-      <div class="support-card reveal">
-        <h3>📬 メールサポート</h3>
-        <p>お問い合わせはメールにて受け付けています。アプリのバージョン・iOS バージョン・具体的な状況をご記載いただくとスムーズに対応できます。</p>
-        <a href="mailto:albedtree222[at]gmail.com" class="email-link">
-          ✉️ albedtree222[at]gmail.com
-        </a>
-      </div>
-      <div class="support-card reveal">
-        <h3>📄 利用規約・ポリシー</h3>
-        <p>ご利用の前に利用規約・プライバシーポリシーをご確認ください。</p>
-        <ul class="link-list">
-          <li>
-            <a href="https://zinc-charger-39b.notion.site/30a4a7a710e78003be71fd3649ec5421" target="_blank" rel="noopener">
-              利用規約 →
-            </a>
-          </li>
-          <li>
-            <a href="https://zinc-charger-39b.notion.site/30a4a7a710e7800b914ff15a5fd9de27" target="_blank" rel="noopener">
-              プライバシーポリシー →
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── CTA ── -->
-<section id="cta">
-  <div class="container">
-    <div class="cta-card reveal">
-      <img src="SNS風メモ日記_Icon.jpg" alt="ティアメモ" class="cta-icon">
-      <h2>自分だけのSNSで、<br class="sp-only">思いのままに投稿しよう。</h2>
-      <a href="https://apps.apple.com/jp/app/SNS風メモ日記-sns%E9%A2%A8%E3%83%A1%E3%83%A2-%E6%8E%A8%E3%81%97%E6%B4%BB-%E3%81%A4%E3%81%B6%E3%82%84%E3%81%8D-%E3%83%A1%E3%83%A2%E5%B8%B3/id6759195422" class="btn btn-primary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        App Store でダウンロード
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ── Footer ── -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-logo">
-      <img src="SNS風メモ日記_Icon.jpg" alt="ティアメモ" class="logo-icon">
-      <span>ティアメモ</span>
-    </div>
-    <ul class="footer-links">
-      <li><a href="#features">機能</a></li>
-      <li><a href="#premium">プレミアム</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#support">サポート</a></li>
-      <li><a href="https://zinc-charger-39b.notion.site/30a4a7a710e78003be71fd3649ec5421" target="_blank" rel="noopener">利用規約</a></li>
-      <li><a href="https://zinc-charger-39b.notion.site/30a4a7a710e7800b914ff15a5fd9de27" target="_blank" rel="noopener">プライバシーポリシー</a></li>
-    </ul>
-    <div class="footer-copy">
-      &copy; 2026 Tomoya Ohashi All rights reserved.
-    </div>
-  </div>
-</footer>
-
+      </details></div></div></section>
+<section id="support" class="section" aria-labelledby="support-title"><div class="container"><div class="section-header"><div><p class="eyebrow">05 / SUPPORT</p><h2 id="support-title">サポート・お問い合わせ</h2></div><p>ご不明点・ご要望はお気軽にご連絡ください。</p></div><div class="support-grid">
+  <article class="support-card"><span class="support-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg></span><div><h3>メールサポート</h3><p>お問い合わせはメールにて受け付けています。アプリのバージョン・iOS バージョン・具体的な状況をご記載いただくとスムーズに対応できます。</p><a href="mailto:albedtree222@gmail.com" class="email-link">albedtree222[at]gmail.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div></article>
+  <article class="support-card"><span class="support-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6l9-4Z"/><path d="m8 12 3 3 5-6"/></svg></span><div><h3>利用規約・ポリシー</h3><p>ご利用の前に利用規約・プライバシーポリシーをご確認ください。</p><ul class="link-list"><li><a href="https://zinc-charger-39b.notion.site/30a4a7a710e78003be71fd3649ec5421" target="_blank" rel="noopener noreferrer">利用規約<span class="sr-only">（新しいタブで開きます）</span><span aria-hidden="true">↗</span></a></li><li><a href="https://zinc-charger-39b.notion.site/30a4a7a710e7800b914ff15a5fd9de27" target="_blank" rel="noopener noreferrer">プライバシーポリシー<span class="sr-only">（新しいタブで開きます）</span><span aria-hidden="true">↗</span></a></li></ul></div></article>
+</div></div></section>
+<section id="cta" aria-labelledby="cta-title"><div class="container"><div class="cta-card"><div class="cta-copy"><img src="images/SNS風メモ日記_Icon.jpg" width="64" height="64" loading="lazy" alt="" class="cta-icon"><div><p class="eyebrow">YOUR OWN TIMELINE</p><h2 id="cta-title">自分だけのSNSで、<br>思いのままに投稿しよう。</h2></div></div><div class="cta-action"><a href="https://apps.apple.com/jp/app/SNS風メモ日記-sns%E9%A2%A8%E3%83%A1%E3%83%A2-%E6%8E%A8%E3%81%97%E6%B4%BB-%E3%81%A4%E3%81%B6%E3%82%84%E3%81%8D-%E3%83%A1%E3%83%A2%E5%B8%B3/id6759195422" class="btn btn-white"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg><span>App Store でダウンロード</span></a><p>ティアメモ / iOS 18.0 以降対応</p></div></div></div></section>
+</main>
+<footer><div class="container"><div class="footer-main"><a href="#hero" class="brand"><img src="images/SNS風メモ日記_Icon.jpg" width="36" height="36" loading="lazy" alt=""><span>ティアメモ</span></a><ul class="footer-links"><li><a href="#features">機能</a></li><li><a href="#premium">プレミアム</a></li><li><a href="#faq">FAQ</a></li><li><a href="#support">サポート</a></li><li><a href="https://zinc-charger-39b.notion.site/30a4a7a710e78003be71fd3649ec5421" target="_blank" rel="noopener noreferrer">利用規約<span class="sr-only">（新しいタブで開きます）</span></a></li><li><a href="https://zinc-charger-39b.notion.site/30a4a7a710e7800b914ff15a5fd9de27" target="_blank" rel="noopener noreferrer">プライバシーポリシー<span class="sr-only">（新しいタブで開きます）</span></a></li></ul></div><div class="footer-bottom"><small>© 2026 Tomoya Ohashi. All rights reserved.</small></div></div></footer>
 <script>
-// スクロールで要素をふわっと表示
-const io = new IntersectionObserver((entries) => {
-  entries.forEach((e) => {
-    if (e.isIntersecting) {
-      e.target.classList.add('is-visible');
-      io.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+'use strict';
 
-// ギャラリーの前後ボタン
-const gallery = document.getElementById('gallery');
-const step = () => Math.min(gallery.clientWidth * 0.8, 640);
-document.querySelector('.gallery-btn.prev').addEventListener('click', () => {
-  gallery.scrollBy({ left: -step(), behavior: 'smooth' });
-});
-document.querySelector('.gallery-btn.next').addEventListener('click', () => {
-  gallery.scrollBy({ left: step(), behavior: 'smooth' });
-});
+// Content remains visible and navigable when JavaScript is unavailable.
+document.documentElement.classList.add('js');
 
-// スクロール時にヘッダーへ影を付ける
-const header = document.getElementById('site-header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('is-scrolled', window.scrollY > 8);
-}, { passive: true });
+const menuToggle = document.querySelector('.menu-toggle');
+const navigation = document.querySelector('#nav-links');
+const mobileLayout = window.matchMedia('(max-width: 900px)');
+
+function closeMenu({ returnFocus = false } = {}) {
+  menuToggle.setAttribute('aria-expanded', 'false');
+  menuToggle.setAttribute('aria-label', 'メニューを開く');
+  navigation.classList.remove('is-open');
+  if (returnFocus) menuToggle.focus();
+}
+
+menuToggle.addEventListener('click', () => {
+  const isOpen = menuToggle.getAttribute('aria-expanded') !== 'true';
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
+  navigation.classList.toggle('is-open', isOpen);
+});
+navigation.addEventListener('click', (event) => {
+  const link = event.target.closest('a');
+  if (!link || !mobileLayout.matches) return;
+  closeMenu();
+  // Move focus to the destination instead of leaving it in the collapsed menu.
+  const target = document.querySelector(link.hash);
+  if (target) {
+    target.setAttribute('tabindex', '-1');
+    target.focus({ preventScroll: true });
+    target.addEventListener('blur', () => target.removeAttribute('tabindex'), { once: true });
+  }
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+    closeMenu({ returnFocus: true });
+  }
+});
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('#site-header')) closeMenu();
+});
+mobileLayout.addEventListener('change', () => closeMenu());
 </script>
 </body>
 </html>
